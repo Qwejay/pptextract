@@ -1,12 +1,9 @@
-# PPT媒体提取器
-这个简单的Python程序旨在帮助用户轻松地从PPT文件中提取媒体文件，如图片和音频。无论您是需要备份这些文件，还是希望在其他项目中重用它们，这个工具都能满足您的需求。
+# PPT Media Extractor
+This simple Python program is designed to help users easily extract media files such as images and audio from PPT files. Whether you need to back up these files or wish to reuse them in other projects, this tool will meet your needs.
 
 Select language:
 - [English](README2.md)
 - [简体中文](README.md)
-
-# PPT Media Extractor
-This simple Python program is designed to help users easily extract media files such as images and audio from PPT files. Whether you need to back up these files or wish to reuse them in other projects, this tool will meet your needs.
 
 ## Main Features:
 
