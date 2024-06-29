@@ -1,6 +1,6 @@
 # PPT媒体提取器
 
-选择语言：
+Welcome to my project! Select your preferred language:
 - [English](README2.md)
 - [简体中文](README.md)
 
