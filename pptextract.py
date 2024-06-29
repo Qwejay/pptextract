@@ -8,6 +8,11 @@ import mimetypes
 import win32com.client as win32
 
 def convert_ppt_to_pptx(ppt_path):
+    """
+    将PPT文件转换为PPTX文件
+    :param ppt_path: PPT文件的路径
+    :return: 转换后的PPTX文件路径，如果转换失败则返回None
+    """
     try:
         powerpoint = win32.gencache.EnsureDispatch('Powerpoint.Application')
         presentation = powerpoint.Presentations.Open(ppt_path, WithWindow=False)
@@ -21,6 +26,11 @@ def convert_ppt_to_pptx(ppt_path):
         return None
 
 def extract_media(ppt_path):
+    """
+    从PPTX文件中提取媒体文件（图片和音频）
+    :param ppt_path: PPT或PPTX文件的路径
+    :return: 提取的媒体文件列表
+    """
     try:
         if ppt_path.endswith('.ppt'):
             ppt_path = convert_ppt_to_pptx(ppt_path)
@@ -76,6 +86,10 @@ def extract_media(ppt_path):
         return []
 
 def on_drop(event):
+    """
+    处理文件拖放事件
+    :param event: 拖放事件
+    """
     file_path = event.data
     if file_path:
         # 处理文件路径，去除可能的特殊字符
@@ -95,6 +109,9 @@ def on_drop(event):
             messagebox.showerror("错误", "无效的文件路径")
 
 def main():
+    """
+    主函数，创建并运行Tkinter窗口
+    """
     root = TkinterDnD.Tk()
     root.title("PPT媒体提取器 v1.1")
     root.geometry("300x100")  # 设置窗口大小
